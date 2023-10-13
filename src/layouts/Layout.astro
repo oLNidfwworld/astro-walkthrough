@@ -1,4 +1,8 @@
 ---
+
+import THeader from '../components/THeader.astro';
+import TFooter   from '../components/TFooter.astro';
+import '/assets/css/vars.css'
 interface Props {
 	title: string;
 }
@@ -17,7 +21,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<THeader/>
 		<slot />
+		<TFooter/>
 	</body>
 </html>
 <style is:global>
@@ -34,8 +40,21 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #2b2d33;
 		background-size: 224px;
+	}
+	@media (min-width: 1920px) { 
+		.container{
+			max-width: 1800px;	
+		}
+	}
+	@media (min-width: 1440px) { 
+		.container{
+			max-width: 1380px;	
+		}
+	}
+	.container{
+		margin: auto;
 	}
 	code {
 		font-family:

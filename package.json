@@ -10,8 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/tailwind": "^5.0.2",
     "@astrojs/vue": "^3.0.0",
     "astro": "^3.0.10",
+    "tailwindcss": "^3.0.24",
     "vue": "^3.2.30"
+  },
+  "devDependencies": {
+    "sass": "^1.69.3"
   }
 }
